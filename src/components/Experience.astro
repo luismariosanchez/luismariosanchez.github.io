@@ -1,0 +1,24 @@
+---
+import TitleSection from "./TitleSection.astro";
+import BriefCase from "./icons/BriefCase.astro";
+import GitHub from "./icons/GitHub.astro";
+import ExperienceItem from "./ExperienceItem.astro"
+import ContainerSection from "./ContainerSection.astro";
+const EXPERIENCIE = [
+  
+  {
+    date: "December 2022 - January 2024",
+    title: "Mobile Front-End Developer",
+    description:
+      "My role focused on building apps with Flutter for clients at a consulting firm. In this position, I acquired knowledge about connections with back-ends, REST API manipulation, project architecture, version control with GitHub, and structures in projects made with Laravel.",
+  },
+]
+---
+<ContainerSection id="experience" class="">
+  <TitleSection Icon={BriefCase} title="Experience"/>
+  <ol class="relative border-s border-[#B686B5] ml-4 mt-4">
+      {
+        EXPERIENCIE.map((experiencie) => (<ExperienceItem {...experiencie} />))
+      }
+  </ol>
+</ContainerSection>

@@ -1,0 +1,26 @@
+---
+interface Technology {
+    icon: any;
+    name: string;
+}
+
+interface Props {
+    title: string;
+    technologies: Technology[];
+}
+const { title,technologies } = Astro.props
+---
+
+<li class="my-6">
+    <h1 class="text-3xl font-semibold text-[#7B7B7B] ">{title}</h1>
+    <ol class="mt-4">
+        {
+            technologies.map((technology)=>(
+            <li class="inline-flex rounded-lg  p-2 border-2 border-[#b686b58d] justify-center items-center gap-x-1 mr-4">
+                <technology.icon class="h-6 w-6"/>
+                <p class="text-[#7B7B7B] font-semibold ">{technology.name}</p>
+            </li>
+        ))
+        }
+    </ol>
+</li>

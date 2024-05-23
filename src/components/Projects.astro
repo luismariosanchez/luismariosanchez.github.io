@@ -1,0 +1,37 @@
+---
+import ContainerSection from "./ContainerSection.astro";
+import ProjectItem from "./ProjectItem.astro";
+import TitleSection from "./TitleSection.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Star from "./icons/Star.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+
+const PROJECTS = [
+    {
+        title:"Personal portfolio",
+        description:"Static web page where the most relevant information about me is found",
+        technologies: [
+            {
+                icon:AstroIcon,
+                color:"#B686B5"
+            },
+            {
+                icon:TailwindIcon,
+                color:"#4D82BC"
+            }
+        ],
+        code: "",
+        image: "/projects/project1.webp"
+    },
+]
+---
+
+
+<ContainerSection id="projects" class="">
+    <TitleSection Icon={Star} title="Projects"/>
+    <ol>
+        {
+            PROJECTS.map((project)=>(<ProjectItem {...project}/>))
+        }
+    </ol>
+</ContainerSection>

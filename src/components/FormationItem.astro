@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string
+    date: string
+    icon: string
+  }
+  
+  const { title, date, icon } = Astro.props
+---
+<li class="flex-col md:flex-row mt-10 flex items-center">
+    <img class="border-2 border-[#7b7b7bb8] rounded-lg  h-20    px-4 py-2.5 mb-2 justify-center
+    items-center"
+    src={icon} alt="title">
+    <div class="pl-4">
+        <h1 class="font-semibold text-[#FFEAFF] text-xl ">{title}</h1>
+        <p class="text-[#7B7B7B] mt-2">{date}</p>
+    </div>
+</li>

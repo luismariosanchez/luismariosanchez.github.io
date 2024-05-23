@@ -1,0 +1,16 @@
+---
+import ContainerSection from "./ContainerSection.astro";
+import TitleSection from "./TitleSection.astro";
+import Person from "./icons/Person.astro";
+---
+
+<ContainerSection id="about-me" class="mb-20">
+    <TitleSection Icon={Person} title="About Me"/>
+    <div class="flex mt-5 flex-col sm:flex-row items-center sm:items-start">
+        <p class="text-[#fcffffc8] text-pretty text-lg sm:mr-4">Hi, my name is Luis Mario, but my friends call me Mario. I have been interested in programming since I saw a movie where a computer scientist did impressive things. I was 12 years old. Since then, I have sought programming knowledge and specialized in the front-end, both mobile and web, since I was fascinated by the graphical interfaces that were created. They were used in the applications that appeared in the movies.
+        </p>
+        <img class="h-[288px]  w-[288px]  shadow-xl rounded-xl  mt-6 sm:mt-0"
+        src="https://pbs.twimg.com/media/GOCMcwbWAAEXqy_?format=jpg&name=small"
+        alt="logo">
+    </div>
+</ContainerSection>

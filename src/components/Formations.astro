@@ -1,0 +1,32 @@
+---
+import ContainerSection from "./ContainerSection.astro";
+import FormationItem from "./FormationItem.astro";
+import TitleSection from "./TitleSection.astro";
+import School from "./icons/School.astro";
+
+const FORMATIONS = [
+    {
+        title:"Higher Degree Training Cycle, Higher Technician in Web Application Development",
+        date:"sept. 2023 - may. 2024",
+        icon:"/lasalle.webp",
+
+    },
+    {
+        title:"Higher Degree Training Cycle, Higher Technician in Multiplatform Application Development",
+        date:"sept. 2021 - may. 2023",
+        icon:"/lasalle.webp",
+
+    }
+]
+
+---
+
+
+<ContainerSection id="formations">
+    <TitleSection title="Formations" Icon={School}/>
+    <ol>
+        {
+            FORMATIONS.map((formation)=>(<FormationItem {...formation}/>))
+        }
+    </ol>
+</ContainerSection>

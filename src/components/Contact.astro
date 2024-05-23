@@ -1,0 +1,26 @@
+---
+import CVButton from "./CVButton.astro";
+import LinkButton from "./LinkButton.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import LinkedinIncon from "./icons/Linkdin.astro";
+---
+
+<section>
+   <div class="flex flex-col sm:flex-row mb-2">
+    <CVButton/>
+   <div class="flex  mt-2 sm:mt-0 ml-0 sm:ml-7  flex-row gap-x-3  justify-center sm:justify-normal ">
+    <LinkButton  href="https://github.com/luismariosanchez">
+        <GitHubIcon class="w-6 h-6"/>
+        Github
+    </LinkButton>
+    <LinkButton href="https://www.linkedin.com/in/luis-mario-sanchez-erazo-2099a0242/">
+        <LinkedinIncon class="w-6 h-6 text-[#fcffffdb] "/>
+        Linkedin
+    </LinkButton> 
+   </div> 
+   </div>  
+   
+   
+</section>
+
+

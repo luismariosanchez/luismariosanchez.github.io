@@ -1,0 +1,73 @@
+---
+import ContainerSection from "./ContainerSection.astro";
+import SkillItem from "./SkillItem.astro";
+import TitleSection from "./TitleSection.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Code from "./icons/Code.astro";
+import Express from "./icons/Express.astro";
+import Flutter from "./icons/Flutter.astro";
+import GitHub from "./icons/GitHub.astro";
+import Kotlin from "./icons/Kotlin.astro";
+import Laravel from "./icons/Laravel.astro";
+import MySQL from "./icons/MySQL.astro";
+
+const TECHNOLOGIES = [
+    {
+        title:"Front-End",
+        technologies: [
+            {
+                name:"Flutter",
+                icon:Flutter
+            },
+            {
+                name:"Kotlin",
+                icon:Kotlin
+            },
+        ]
+    },
+    {
+        title:"Back-End",
+        technologies: [
+            {
+                name:"Laravel",
+                icon:Laravel
+            },
+            {
+                name:"ExpressJS",
+                icon:Express
+            },
+        ]
+    },
+    {
+        title:"Databases",
+        technologies: [
+            {
+                name:"MySQL",
+                icon:MySQL
+            },
+           
+        ]
+    },
+    {
+        title:"Version Control",
+        technologies: [
+            {
+                name:"GitHub",
+                icon:GitHub
+            },
+           
+        ]
+    }
+]
+---
+
+
+<ContainerSection id="skills">
+    <TitleSection Icon={Code}title="Skills"/>
+    <p class="mt-6 text-[#7B7B7B] ">I also have experience in web development (front and back), but only at the school training level. I am still learning things!!! My most notable technologies are:</p>
+    <ol>
+        {
+            TECHNOLOGIES.map((technology)=>(<SkillItem {...technology}/>))
+        }
+    </ol>
+</ContainerSection>

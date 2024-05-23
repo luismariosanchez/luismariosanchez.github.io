@@ -1,0 +1,68 @@
+---
+import Contact from "./Contact.astro"
+import MailIcon from "./icons/Mail.astro"
+import Send from "./icons/Send.astro";
+import Copy from "./icons/Copy.astro";
+import LinkButton from "./LinkButton.astro";
+import ContainerSection from "./ContainerSection.astro";
+const email = "luis_sanchez_erazo@hotmail.com";
+---
+<ContainerSection id="#"class=" flex flex-col  lg:items-start" >
+    <div class="flex flex-col lg:flex-row items-center justify-center lg:items-start md:justify-start">
+        <img class=" h-[200px] w-[200px] sm:h-[288px]  sm:w-[288px]  shadow-xl lg:rounded-xl rounded-full "
+        src="https://pbs.twimg.com/media/GOCMcwbWAAEXqy_?format=jpg&name=small"
+        alt="logo">
+        <div class="md:ml-7  ">
+            <p class="text-lg opacity-80 mb-1  text-[#FFEAFF] ">Hi, I'm</p>
+            <h1 class="text-[#8D578B] text-3xl font-bold sm:text-5xl">Luis Mario.</h1>
+            <h2 class="sm:text-5xl text-3xl font-bold  ">
+                <span>I'm a</span>
+                <span class="text-[#8D578B]"> Mobile Front-End</span>
+                <h2 class="text-3xl sm:text-5xl font-bold ">Developer!</h2>
+            </h2>
+            <p class="text-lg opacity-80  mt-3  text-[#FFEAFF] mb-5">My motto is: simple, functional, dynamic and scalable</p>
+            <Contact/>
+        </div>
+    </div>
+    <div class="gap-x-3 mt-3 flex flex-col   min-[480px]:flex-row   justify-center  ms:justify-normal">
+        <div
+        class="text-[#fcffffdb] gap-x-2 flex border-2 border-[#484848]  font-medium rounded-lg px-2 py-2.5 mb-2 mr-3
+        items-center"
+        >
+        <MailIcon class="w-6 h-6"/>
+        <p class=" sm:pr-[150px]  sm:text-lg">{email}</p>
+        </div>
+        <div class="flex gap-x-3">
+            <LinkButton href=`mailto:${email}`>
+                <Send class="w-5 h-5"/>
+            </LinkButton>
+            <button id="copy" class=" text-[#fcffffdb]
+            border-2 border-[#484848] 
+                font-medium rounded-lg text-sm px-4 py-2.5
+                text-center mb-2
+                hover:scale-110
+                transition
+                flex
+                justify-center
+                items-center">
+                <Copy class="w-5 h-5"/>
+            </button>
+        </div>
+    </div>
+</ContainerSection>
+<script>
+    const email = "luis_sanchez_erazo@hotmail.com";
+    const copy = document.querySelector("#copy");
+    if(copy !== null){
+      copy.addEventListener("click", () => {
+          navigator.clipboard.writeText
+                  (email);
+                  
+    });
+    }
+  </script>
+<style>
+    section {
+        display: flex;
+    }
+</style>
